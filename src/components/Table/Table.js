@@ -1,5 +1,7 @@
+import Table2 from "../Table2";
+
 const style = {
-  border: "1px solid black",
+  border: "1px solid purple",
   padding: "5px",
   borderCollapse: "collapse",
 };
@@ -23,15 +25,10 @@ const Table = () => {
     },
   ];
 
-  const author = users.map((item) => {
-    return (
-      <tr>
-        <td style={style}>{item.userId}</td>
-        <td style={style}>{item.id}</td>
-        <td style={style}>{item.title}</td>
-      </tr>
-    );
-  });
-  return <table style={style}>{author}</table>;
+  const test = users.map((item) => {
+    return <Table2 src={item} />
+  })
+  
+  return <table style={style}>{test}</table>;
 };
 export default Table;
