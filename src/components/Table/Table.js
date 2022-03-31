@@ -1,34 +1,66 @@
-import Table2 from "../Table2";
-
 const style = {
-  border: "1px solid purple",
+  border: "1px solid black",
   padding: "5px",
-  borderCollapse: "collapse",
-};
+  borderCollapse: "collapse"
+  
+}
+
 
 const Table = () => {
   const users = [
     {
       userId: 1,
       id: 1,
+      age: 28,
+      name: "Michael",
       title: "quidem molestiae enim",
     },
     {
       userId: 1,
-      id: 2,
-      title: "sunt qui excepturi placeat culpa",
+      id: 1,
+      age: 38,
+      name: "Hope",
+      title: "quidem molestiae enim",
     },
     {
       userId: 1,
-      id: 3,
-      title: "omnis laborum odio",
+      id: 1,
+      age: 58,
+      name: "Halsey",
+      title: "quidem molestiae enim",
+    },
+    {
+      userId: 5,
+      id: 2,
+      age: 78,
+      name: "Flora",
+      title: "quidem molestiae enim",
+    },
+    {
+      userId: 2,
+      id: 5,
+      age: 27,
+      name: "Andy",
+      title: "quidem molestiae enim",
     },
   ];
 
-  const test = users.map((item) => {
-    return <Table2 src={item} />
-  })
+  const person = users.map((item) =>{
+    return (
   
-  return <table style={style}>{test}</table>;
+         <tr style={style}>
+           <td style={style}>{item.userId}</td>
+           <td style={style}>{item.id}</td>
+           <td style={style}>{item.age}</td>
+           <td style={style}>{item.name}</td>
+           <td style={style}>{item.title}</td>
+         </tr>
+         
+         
+      
+    )
+  })
+  return <table  style={style}>{person}</table>;
+  
 };
 export default Table;

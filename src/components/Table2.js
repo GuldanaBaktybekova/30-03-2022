@@ -18,3 +18,10 @@ function Table2(props) {
 }
 
 export default Table2;
+
+// const test = users.map((item) => {
+//   return <Table2 src={item} />
+// })
+
+// return <table style={style}>{test}</table>;
+// import Table2 from "../Table2";
